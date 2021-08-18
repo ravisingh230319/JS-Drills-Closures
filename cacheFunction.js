@@ -9,10 +9,10 @@ export function cacheFunction(cb) {
   return (par) => {
     if (!Object.prototype.hasOwnProperty.call(cache,par)) {
       cache[par] = cb(par);
-      return cache[par];
+      return cb(par);
     } 
     else 
-      return cache;
+      return cache[par];
   }; 
 }
 
