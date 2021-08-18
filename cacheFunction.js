@@ -12,7 +12,7 @@ export function cacheFunction(cb) {
       return cb(par);
     } 
     else 
-      return cache[par];
+      return {[par]: cache[par]};
   }; 
 }
 
